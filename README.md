@@ -1,1 +1,2 @@
-# Grocery-App
+# Grocery Management App
+ Grocery Management App Designed and developed complex web application using django , Html , Css and sqllite where admin can perform function like adding products,viewing products, deleting products and updating them which will help in product management in store also the admin can add sales in store through the app.A grocery product management project involves creating a system or application to efficiently manage and track grocery products in a store or inventory.
