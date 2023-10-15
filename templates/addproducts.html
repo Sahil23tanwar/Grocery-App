@@ -1,0 +1,43 @@
+{% extends "Next.html" %}
+{% block title %}
+    Add product
+{% endblock title %}
+{% block body %}
+<h2 style="text-align: center;margin-top:20px;">Add/Update Products in Store</h2>
+  <div class="container" align="center" ">
+    <form method="post" action="/addproducts" style="margin:auto;width: 400px;">
+      {% csrf_token %}
+      <div class="form-group" style="margin:auto;">
+        <label for="id">Id</label><br>
+        <input style="border:solid black 1px;" type="text" class="form-control" id="id" name="product_id"
+          placeholder="Enter  product id"><br>
+      </div>
+      <div class="form-group" style="margin:auto;">
+        <label for="name">Product Name</label><br>
+        <input style="border:solid black 1px;" type="text" class="form-control" id="name" name="pname"
+          placeholder="Enter product name"><br>
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label><br>
+        <input style="border:solid black 1px;" type="text" class="form-control" id="price" name="price"
+          placeholder="Enter your price"><br>
+      </div>
+      <div class="form-group">
+        <label for="brand">Brand</label><br>
+        <input style="border:solid black 1px;" type="text" class="form-control" id="brand" name="brand"
+          placeholder="Enter your brand"><br>
+      </div>
+      <div class="form-group">
+        <label for="type">Type</label><br>
+        <input style="border:solid black 1px;" type="text" class="form-control" id="type" name="ptype"
+          placeholder="Enter type of product"><br>
+      </div>
+      <div class="form-group">
+        <label for="type">Quantity</label><br>
+        <input style="border:solid black 1px;" type="text" class="form-control" id="type" name="quantity"
+          placeholder="Enter Quantity u want"><br>
+      </div>
+      <button type="submit" class="btn btn-success" name="submit">Submit</button>
+    </form>
+  </div>
+{% endblock body %}

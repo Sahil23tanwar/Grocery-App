@@ -1,0 +1,79 @@
+{% extends "Next.html" %}
+{% block title %}
+    Add Sales
+{% endblock title %}
+{% block body %}
+<h2 style="text-align: center;margin-top:20px;">Add Sales for your Store</h2>
+  <div class="container" align="center" ">
+   
+    <div class="container">
+        <h1 class="text-center my-3">List of Products</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#PID</th>
+                        <th>NAME</th>
+                        <th>PRICE</th>
+                        <th>BRAND</th>
+                        <th>TYPE</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for p in prdcts%}
+                      <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{p.pname}}</td>
+                        <td>{{p.price}}</td>
+                        <td>{{p.brand}}</td>
+                        <td>{{p.ptype}}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+          crossorigin="anonymous"
+        ></script>
+  </div>
+  <form method="post" action="/addsales" style="margin:auto;width: 400px;">
+    {% csrf_token %}
+    <div class="form-group" style="margin:auto;">
+      <label for="id">Sno</label><br>
+      <input style="border:solid black 1px;" type="text" class="form-control" id="id" name="customer_id"
+        placeholder="Enter  customer sno"><br>
+    </div>
+    <div class="form-group" style="margin:auto;">
+      <label for="name">Customer Name</label><br>
+      <input style="border:solid black 1px;" type="text" class="form-control" id="name" name="cname"
+        placeholder="Enter Customer name"><br>
+    </div>
+    <div class="form-group">
+      <label for="pname">Product Name</label><br>
+      <input style="border:solid black 1px;" type="text" class="form-control" id="pname" name="pname"
+        placeholder="Enter product name"><br>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label><br>
+      <input style="border:solid black 1px;" type="text" class="form-control" id="price" name="price"
+        placeholder="Enter Product's Price"><br>
+    </div>
+    <div class="form-group">
+      <label for="quantity">quantity</label><br>
+      <input style="border:solid black 1px;" type="text" class="form-control" id="quantity" name="quantity"
+        placeholder="Enter quantity"><br>
+    </div>
+    <button type="submit" class="btn btn-success" name="submit">Submit</button>
+  </form>
+  </div>
+{% endblock body %}

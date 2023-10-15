@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}
+Home
+{% endblock title %}
+{% block body%}
+<div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block " style="height: 350px; width: 1000px;margin:auto;"
+                    src="https://img.pikbest.com/origin/06/05/45/56ipIkbEsTFMk.jpg!bwr800" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5></h5>
+                    <!-- <p>The whole caption will only show up if the screen is at least medium size.</p> -->
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block " style="height: 350px; width: 1000px; margin:auto;"
+                    src="https://img.pikbest.com/origin/06/05/45/53ypIkbEsTJ95.jpg!w700wp" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block " style="height: 350px; width: 1000px; margin:auto;"
+                    src="https://i.pinimg.com/1200x/d1/11/43/d11143e71df51f4b4c15b8379ffea8ab.jpg" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<div class="features" style="margin:auto; text-align:center; width:1000px">
+    <h2 style="margin:10px 0 30px 0;">Features of Application</h2>
+    <ul type="none">
+        <li>
+            <h5 style="color:rgb(143, 177, 3)">Product Management</h5>
+        </li>
+        <hr>
+        <p>Product management in a grocery store is a critical aspect of ensuring customer satisfaction, efficient operations, and profitability. It involves the strategic selection, sourcing, display, and maintenance of products on the store's shelves.Here the owner can perform various operations like adding products to the stock with different details of product like product name,brand name,price,etc.The owner can maintain a proper database of the products for a efficient functioning of store.Owner can also view the products and also update or delete the products as per their liking.</p>
+        <li>
+            <h5 style="color:rgb(143, 177, 3)">Adding Sales</h5>
+        </li>
+        <hr>
+        <p>
+            Adding Sales in a grocery store is a critical aspect of ensuring the store's profitability, customer satisfaction, and overall success. It involves various strategies and practices aimed at optimizing the sales process and maximizing revenue. Here is a short note highlighting key elements of sales management in a grocery store:Here the owner can perform various operations like adding sales  with different details of customer like customer name,product brand name,price,etc.The owner can maintain a proper database of the customers for a efficient functioning of store</p>
+        <li>
+            <h5 style="color:rgb(143, 177, 3)">Login & Logout Functionality</h5>
+        </li>
+        <hr>
+        <p>Login management in a grocery store refers to the system and processes in place to control access to the store's digital systems and resources. It is a crucial aspect of ensuring the security and integrity of the store's operations. Here's a short note on login management in a grocery store:User Authentication: User authentication is the cornerstone of login management. Owner have unique username and password to access the store's computer systems inventory databases, and other digital resources. This ensures that only authorized personnel can access sensitive information and perform specific tasks.The Owner can also logout from thier account with just a click of button.
+        </p>
+
+    </ul>
+</div>
+{% endblock body%}

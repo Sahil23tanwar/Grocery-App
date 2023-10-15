@@ -1,0 +1,54 @@
+{% extends "Next.html" %}
+{% block title %}
+    Edit Products
+{% endblock title %}
+{% block body %}
+  <div class="container">
+        <h1 class="text-center my-3">Product Management</h1>
+        <h1 class="text-center my-3">List of Products</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#PID</th>
+                        <th>NAME</th>
+                        <th>PRICE</th>
+                        <th>BRAND</th>
+                        <th>TYPE</th>
+                        <th>QUANTITY</th>
+                        <th>ACTION</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for p in prdcts %}
+                      <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{p.pname}}</td>
+                        <td>{{p.price}}</td>
+                        <td>{{p.brand}}</td>
+                        <td>{{p.ptype}}</td>
+                        <td>{{p.quantity}}</td>
+                        <td>
+                          <a href="editproducts/{{p.id}}" class="btn btn-danger btn-sm">Delete</a>
+                          <a href="editproducts/{{p.id}}" class="btn btn-dark btn-sm">Update</a>
+                        </td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+          crossorigin="anonymous"
+        ></script>
+  </div>
+{% endblock body %}

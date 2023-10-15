@@ -1,0 +1,30 @@
+<!--template inheritence-->
+{% extends 'base.html' %}
+{% block title %}Contact Us{% endblock title %}
+{% block body %}
+<div class="container" align="center" ">
+  <h1 style=" margin-top: 10px;margin-bottom: 30px;font-size:30px;">
+  Contact Us
+  </h1>
+  <form method="post" action="/contact" style="margin:auto;width: 400px;">
+    {% csrf_token %}
+    <div class="form-group" style="margin:auto;">
+      <label for="name">Name</label><br>
+      <input style="border:solid black 1px;" type="text" class="form-control" id="name" name="name"
+        placeholder="Enter your name"><br>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label><br>
+      <input style="border:solid black 1px;" type="phone" class="form-control" id="phone" name="phone"
+        placeholder="Enter your phone"><br>
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label><br>
+      <input style="border:solid black 1px;" type="email" class="form-control" id="email" name="email"
+        placeholder="Enter your emaild"><br>
+    </div>
+    
+    <button type="submit" class="btn btn-success" name="submit">Submit</button>
+  </form>
+</div>
+{% endblock body %}
